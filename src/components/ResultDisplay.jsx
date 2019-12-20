@@ -12,7 +12,7 @@ const useStyles = makeStyles({
 	}
 });
 
-const ResultDisplay = ({ tweets, deleteSymbol, setSymbols }) => {
+const ResultDisplay = ({ tweets, deleteSymbol }) => {
 	const classes = useStyles();
 
 	return (
@@ -21,7 +21,6 @@ const ResultDisplay = ({ tweets, deleteSymbol, setSymbols }) => {
 				<TweetsArea
 					data={data}
 					deleteSymbol={deleteSymbol}
-					setSymbols={setSymbols}
 					key={index}
 				/>
 			))}
