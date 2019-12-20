@@ -10,7 +10,8 @@ import AddIcon from '@material-ui/icons/Add';
 const useStyles = makeStyles(theme => ({
 	container: {
 		display: 'flex',
-		flexDirection: 'column'
+		flexDirection: 'column',
+		marginTop: '1em'
 	}
 }));
 
@@ -49,6 +50,7 @@ const MultiForm = ({ setSymbols }) => {
 				<div key={index}>
 					<TextField
 						value={field}
+						placeholder='Enter a stock symbol'
 						onChange={e => handleChange(e, index)}
 					/>
 					<IconButton
@@ -67,7 +69,7 @@ const MultiForm = ({ setSymbols }) => {
 				<AddIcon />
 			</IconButton>
 			<Button variant='contained' color='primary' onClick={handleSubmit}>
-				submit
+				pull tweets
 			</Button>
 		</form>
 	);
